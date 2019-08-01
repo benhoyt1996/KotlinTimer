@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context=".Fragments.TimerFragment">
+    <TextView
+              android:id="@+id/title_text_view"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="20dp"
+              android:text="Ben's Timer"
+
+                />
+
+    <RelativeLayout android:id="@+id/time_picker_layout"
+            android:layout_width="wrap_content" android:layout_height="400dp"
+                    android:layout_centerHorizontal="true" android:layout_marginTop="20dp"
+                    android:layout_below="@id/title_text_view">
+
+        <com.github.stephenvinouze.materialnumberpickercore.MaterialNumberPicker
+                android:id="@+id/minutes_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:mnpMaxValue="50"
+                app:mnpMinValue="1"
+                app:mnpEditable="false"
+                app:mnpSeparatorColor="@color/colorAccent"
+                app:mnpTextColor="@color/colorPrimary"
+                app:mnpTextSize="25sp"
+                app:mnpTextStyle="bold"
+                app:mnpValue="10"
+                app:mnpWrapped="false"
+                android:layout_marginRight="30dp"/>
+
+        <com.github.stephenvinouze.materialnumberpickercore.MaterialNumberPicker
+                android:id="@+id/seconds_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:mnpMaxValue="60"
+                app:mnpMinValue="0"
+                app:mnpEditable="false"
+                app:mnpSeparatorColor="@color/colorAccent"
+                app:mnpTextColor="@color/colorPrimary"
+                app:mnpTextSize="35sp"
+                app:mnpTextStyle="bold"
+                app:mnpValue="10"
+                app:mnpWrapped="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/minutes_picker"
+                                    />
+
+
+
+    </RelativeLayout>
+
+    <TextView android:id="@+id/time_left_text_view"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true" android:layout_marginTop="30dp"
+              android:layout_below="@id/time_picker_layout"
+              android:textSize="25dp"
+              android:layout_margin="20dp"
+
+    />
+
+</RelativeLayout>
