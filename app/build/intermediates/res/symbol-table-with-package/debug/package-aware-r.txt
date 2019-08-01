@@ -1158,7 +1158,6 @@ id media_actions
 id message
 id middle
 id mini
-id minutes_picker
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1252,6 +1251,8 @@ id textinput_helper_text
 id time
 id time_left_text_view
 id time_picker_layout
+id timer_start_button
+id timer_stop_reset_button
 id title
 id titleDividerNoCustom
 id title_template

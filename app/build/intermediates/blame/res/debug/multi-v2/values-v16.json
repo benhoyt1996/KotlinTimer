@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/benjamin/AndroidStudioProjects/BensTimer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "D:\\AndroidStudioProjects\\KotlinTimer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/9fef926f803f4f1b4aed6a70be3f113a/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\nonmo_000\\.gradle\\caches\\transforms-2\\files-2.1\\8c8c9e73858b992d899f1624142e545a\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/eba83a1a30b429df5bb7acac44a7d746/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\nonmo_000\\.gradle\\caches\\transforms-2\\files-2.1\\3f00f9ec23ca8ff430d9f76482e37152\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

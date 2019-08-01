@@ -3,11 +3,13 @@ package com.example.benji.benstimer.Fragments
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 
 import com.example.benji.benstimer.R
 import kotlinx.android.synthetic.main.fragment_timer.*
@@ -20,11 +22,10 @@ class TimerFragment : Fragment() {
     var currentSecs: Int? = null
     var currentMins: Int? = null
 
-
-
     var isTimerRunning = false
 
     var timeLeft: TextView? = time_left_text_view
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,50 +38,22 @@ class TimerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_timer, container, false)
-
-
-
-        //time_picker.setOnTimeChangedListener { timePicker, i, test ->  }
-
-
-
-
         return view
     }
 
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
-
-
-
-        if(context != null)
-        {
-
-        }
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        minutes_picker.maxValue = 5
-//        minutes_picker.minValue = 0
+        timer_stop_reset_button.text = "--- ---"
 
         seconds_picker.maxValue = 60
         seconds_picker.minValue = 0
 
-
-//        minutes_picker.setOnValueChangedListener { numberPicker, oldValue, newValue ->
-//            currentMins = newValue
-//            updateTimer()
-//        }
-
-        seconds_picker.setOnValueChangedListener { numberPicker, oldValue, newValue ->
-            currentSecs = newValue
-            updateTimer(newValue)
-        }
-
+        setListners()
 
     }
 
@@ -88,32 +61,12 @@ class TimerFragment : Fragment() {
         super.onDetach()
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
     interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TimerFragment.
-         */
-        // TODO: Rename and change types and number of parameters
 
         fun newInstance(): TimerFragment {
             return TimerFragment()
@@ -122,12 +75,75 @@ class TimerFragment : Fragment() {
 
     }
 
+    fun setListners() {
 
-    fun updateTimer(newValue: Int?) {
+        seconds_picker.setOnValueChangedListener { numberPicker, oldValue, newValue ->
+            if(!isTimerRunning)
+            {
+                currentSecs = newValue
+                updateTimerText(newValue)
+            }
+        }
+
+        timer_start_button.setOnClickListener{
+            if(!isTimerRunning)
+            {
+                startTimer()
+                timer_stop_reset_button.text = "STOP TIMER"
+            }
+        }
+
+        timer_stop_reset_button.setOnClickListener {
+            if(isTimerRunning)
+            {
+                stopTimer()
+            }
+            else
+            {
+
+            }
+        }
+    }
+
+
+    fun updateTimerText(newValue: Int?) {
         if(!isTimerRunning)
         {
             time_left_text_view.text = newValue.toString()
         }
+    }
+
+    fun startTimer() {
+
+
+        isTimerRunning = true
+        val time = "${seconds_picker.value}000"
+
+        val timer = object: CountDownTimer(time.toLong(), 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                if(isTimerRunning)
+                {
+                    val secs = millisUntilFinished.toString().dropLast(3)
+                    time_left_text_view.text = "$secs"
+                }
+                else { cancel()
+                        onFinish() }
+            }
+            override fun onFinish() {
+                Toast.makeText(context, "TIMER IS DONE BEEP BEEP BEEP", Toast.LENGTH_SHORT)
+            }
+        }
+        timer.start()
+    }
+
+
+    //TODO
+    fun stopTimer() {
+        isTimerRunning = false
+
+
+
+
     }
 
 }
