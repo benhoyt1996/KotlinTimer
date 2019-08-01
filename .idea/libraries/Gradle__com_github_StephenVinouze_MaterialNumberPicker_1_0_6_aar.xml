@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.StephenVinouze:MaterialNumberPicker:1.0.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a381479e9edc15dafc313dd8e657a08c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a381479e9edc15dafc313dd8e657a08c/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.StephenVinouze/MaterialNumberPicker/1.0.6/4ec617a78053079562ce45cd674d9af1cc0afc13/MaterialNumberPicker-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
