@@ -1224,8 +1224,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/benji/benstimer/Fragments/TimerFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1030">
-              <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+            <state relative-caret-position="486">
+              <caret line="146" column="5" lean-forward="true" selection-start-line="17" selection-end-line="146" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -1480,6 +1480,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2531983" />
@@ -1561,8 +1562,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/benji/benstimer/Fragments/TimerFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1030">
-          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+        <state relative-caret-position="486">
+          <caret line="146" column="5" lean-forward="true" selection-start-line="17" selection-end-line="146" selection-end-column="5" />
         </state>
       </provider>
     </entry>
