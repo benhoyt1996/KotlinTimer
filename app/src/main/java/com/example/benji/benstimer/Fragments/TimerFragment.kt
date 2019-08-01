@@ -141,7 +141,7 @@ class TimerFragment : Fragment() {
     fun stopTimer() {
         isTimerRunning = false
 
-
+        //MAKE STOP FUNCTIONALITY BETTER
 
 
     }
