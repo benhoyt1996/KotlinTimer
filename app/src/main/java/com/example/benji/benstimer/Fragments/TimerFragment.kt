@@ -13,6 +13,8 @@ import android.widget.Toast
 
 import com.example.benji.benstimer.R
 import kotlinx.android.synthetic.main.fragment_timer.*
+import java.util.*
+import java.util.concurrent.TimeUnit
 
 
 class TimerFragment : Fragment() {
@@ -24,7 +26,33 @@ class TimerFragment : Fragment() {
 
     var isTimerRunning = false
 
-    var timeLeft: TextView? = time_left_text_view
+    //var time: String = "20000"
+
+    var time = "20000"
+
+
+
+//    var globalTimer = object : CountDownTimer(time.toLong(), 1000) {
+//        override fun onTick(millisUntilFinished: Long) {
+//
+//            val secs = millisUntilFinished.toString().dropLast(3)
+//            //time_left_text_view.text = "$secs"
+//            time_left_text_view.text = "${millisUntilFinished / 1000}"
+//        }
+//
+//        override fun onFinish() {
+//            Toast.makeText(context, "TIMER IS DONE BEEP BEEP BEEP", Toast.LENGTH_SHORT)
+//            cancel()
+//            isTimerRunning = false
+//        }
+//    }
+
+    var timer: Timer?=null
+
+
+
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +77,8 @@ class TimerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         timer_stop_reset_button.text = "--- ---"
+
+
 
         seconds_picker.maxValue = 60
         seconds_picker.minValue = 0
@@ -88,7 +118,8 @@ class TimerFragment : Fragment() {
         timer_start_button.setOnClickListener{
             if(!isTimerRunning)
             {
-                startTimer()
+                //startTimer()
+                startOtherTimer()
                 timer_stop_reset_button.text = "STOP TIMER"
             }
         }
@@ -96,7 +127,8 @@ class TimerFragment : Fragment() {
         timer_stop_reset_button.setOnClickListener {
             if(isTimerRunning)
             {
-                stopTimer()
+                //stopTimer()
+                updateTimer()
             }
             else
             {
@@ -113,37 +145,68 @@ class TimerFragment : Fragment() {
         }
     }
 
-    fun startTimer() {
+//    fun startTimer() {
+//
+//
+//
+//
+//            globalTimer.start()
+//            isTimerRunning = true
+//
+//            //createTimerObject()
+//
+//    }
 
-
-        isTimerRunning = true
-        val time = "${seconds_picker.value}000"
-
-        val timer = object: CountDownTimer(time.toLong(), 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                if(isTimerRunning)
-                {
-                    val secs = millisUntilFinished.toString().dropLast(3)
-                    time_left_text_view.text = "$secs"
-                }
-                else { cancel()
-                        onFinish() }
-            }
-            override fun onFinish() {
-                Toast.makeText(context, "TIMER IS DONE BEEP BEEP BEEP", Toast.LENGTH_SHORT)
-            }
-        }
-        timer.start()
+    //Call this method to start timer on activity start
+    private fun startOtherTimer(){
+        time = "${seconds_picker?.value}000"
+        timer = Timer(time.toLong());
+        timer?.start()
     }
+
+    inner class Timer(miliis:Long) : CountDownTimer(miliis,1000){
+        var millisUntilFinished:Long = 0
+        override fun onFinish() {
+            time_left_text_view.text = "Left : 0"
+
+            timer_stop_reset_button.visibility = View.VISIBLE
+        }
+
+        override fun onTick(millisUntilFinished: Long) {
+            this.millisUntilFinished = millisUntilFinished
+            time_left_text_view.text = "Left : "+millisUntilFinished/1000
+        }
+    }
+
+    //Call this method to update the timer0
+    private fun updateTimer(){
+        if(timer!=null) {
+            val miliis = "${timer?.millisUntilFinished} + ${TimeUnit.SECONDS.toMillis(5)}"
+            //Here you need to maintain single instance for previous
+            timer?.cancel()
+            timer = Timer(miliis.toLong());
+            timer?.start()
+        }else{
+            startOtherTimer()
+        }
+    }
+
+
+
 
 
     //TODO
-    fun stopTimer() {
-        isTimerRunning = false
+//    fun stopTimer() {
+//
+//        globalTimer.cancel()
+//        globalTimer.onFinish()
+//        isTimerRunning = false
+//
+//        //MAKE STOP FUNCTIONALITY BETTER
+//
+//
+//    }
 
-        //MAKE STOP FUNCTIONALITY BETTER
 
-
-    }
 
 }
