@@ -22,7 +22,7 @@
 
     <RelativeLayout android:id="@+id/time_picker_layout" android:layout_below="@id/title_text_view"
                     android:layout_width="wrap_content" android:layout_height="400dp"
-                    android:layout_centerHorizontal="true" android:layout_marginTop="2dp">
+                    android:layout_centerHorizontal="true" android:layout_marginTop="10dp">
 
         <com.github.stephenvinouze.materialnumberpickercore.MaterialNumberPicker
                 android:id="@+id/seconds_picker"
@@ -60,7 +60,18 @@
             android:background="#3C565E"
             android:layout_centerHorizontal="true" android:layout_marginTop="5dp" />
 
-
+    <!--<com.google.android.material.button.MaterialButton-->
+            <!--android:id="@+id/material_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="MY TEST BUTTON"-->
+            <!--android:minHeight="75dp"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="#1BB3AB"-->
+            <!--android:background="#3C565E"-->
+    <!--android:layout_centerHorizontal="true"-->
+            <!--android:textAppearance="@style/TextAppearance.MaterialComponents.Button"-->
+    <!--android:layout_below="@id/timer_stop_reset_button"/>-->
 
 </RelativeLayout>
 

@@ -4,7 +4,7 @@
             "outputFile": "/home/benjamin/AndroidStudioProjects/BensTimer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/9fef926f803f4f1b4aed6a70be3f113a/res/values-cs/values-cs.xml",
+                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/de52c3820be3b606e354d593e936e59b/res/values-cs/values-cs.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/eba83a1a30b429df5bb7acac44a7d746/res/values-cs/values-cs.xml",
+                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/76e24bac0f7073f88254ee987134b2d2/res/values-cs/values-cs.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
