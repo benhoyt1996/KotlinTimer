@@ -1,51 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-                tools:context=".Fragments.TimerFragment">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                tools:context=".Fragments.TimerFragment" android:background="#3C565E">
+
     <TextView
-              android:id="@+id/title_text_view"
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="5dp"
+            android:textSize="30sp"
+            android:textColor="#1BB3AB"
+            android:text="Time Left:"/>
+
+    <TextView android:id="@+id/time_left_text_view" android:layout_below="@id/title_text_view"
               android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="20dp"
-              android:text="Ben's Timer" />
+              android:layout_centerHorizontal="true" android:layout_marginTop="30dp"
+              android:textSize="60sp"
+              android:textColor="#1BB3AB"
+              android:layout_margin="5dp"/>
 
     <RelativeLayout android:id="@+id/time_picker_layout" android:layout_below="@id/title_text_view"
-            android:layout_width="wrap_content" android:layout_height="400dp"
-                    android:layout_centerHorizontal="true" android:layout_marginTop="20dp" >
+                    android:layout_width="wrap_content" android:layout_height="400dp"
+                    android:layout_centerHorizontal="true" android:layout_marginTop="2dp">
 
         <com.github.stephenvinouze.materialnumberpickercore.MaterialNumberPicker
                 android:id="@+id/seconds_picker"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 app:mnpMaxValue="60"
                 app:mnpMinValue="0"
                 app:mnpEditable="false"
-                app:mnpSeparatorColor="@color/colorAccent"
-                app:mnpTextColor="@color/colorPrimary"
-                app:mnpTextSize="35sp"
+                app:mnpSeparatorColor="#1BB3AB"
+                app:mnpTextColor="#1BB3AB"
+                app:mnpTextSize="75sp"
                 app:mnpTextStyle="bold"
                 app:mnpValue="10"
                 app:mnpWrapped="true"
-                android:layout_marginTop="15dp" />
+                android:padding="5dp"
+                android:layout_marginTop="15dp"/>
 
     </RelativeLayout>
 
-    <TextView android:id="@+id/time_left_text_view" android:layout_below="@id/time_picker_layout"
-              android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:layout_centerHorizontal="true" android:layout_marginTop="30dp"
-              android:textSize="45dp"
-              android:layout_margin="20dp" />
 
-    <Button android:id="@+id/timer_start_button" android:layout_below="@id/time_left_text_view"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
+    <Button android:id="@+id/timer_start_button" android:layout_below="@id/time_picker_layout"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="75dp"
             android:textSize="20sp"
+            android:textColor="#1BB3AB"
+            android:background="#3C565E"
             android:layout_centerHorizontal="true"
             android:text="START TIMER!"/>
 
     <Button android:id="@+id/timer_stop_reset_button" android:layout_below="@id/timer_start_button"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="75dp"
             android:textSize="20sp"
-            android:layout_centerHorizontal="true" android:layout_marginTop="15dp" />
+            android:textColor="#1BB3AB"
+            android:background="#3C565E"
+            android:layout_centerHorizontal="true" android:layout_marginTop="5dp" />
+
+
 
 </RelativeLayout>
+
