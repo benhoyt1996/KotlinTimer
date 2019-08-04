@@ -4,17 +4,7 @@
             "outputFile": "/home/benjamin/AndroidStudioProjects/BensTimer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/76e24bac0f7073f88254ee987134b2d2/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/de52c3820be3b606e354d593e936e59b/res/values-v16/values-v16.xml",
+                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/71a578a7665f5412b83d09ed233dbc43/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/85477137eba8a2beeda2706cc2a7a242/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

@@ -12,21 +12,21 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int mnpEditable = 0x7f030165;
-        public static final int mnpFontname = 0x7f030166;
-        public static final int mnpMaxValue = 0x7f030167;
-        public static final int mnpMinValue = 0x7f030168;
-        public static final int mnpSeparatorColor = 0x7f030169;
-        public static final int mnpTextColor = 0x7f03016a;
-        public static final int mnpTextSize = 0x7f03016b;
-        public static final int mnpTextStyle = 0x7f03016c;
-        public static final int mnpValue = 0x7f03016d;
-        public static final int mnpWrapped = 0x7f03016e;
+        public static final int mnpEditable = 0x7f0301d3;
+        public static final int mnpFontname = 0x7f0301d4;
+        public static final int mnpMaxValue = 0x7f0301d5;
+        public static final int mnpMinValue = 0x7f0301d6;
+        public static final int mnpSeparatorColor = 0x7f0301d7;
+        public static final int mnpTextColor = 0x7f0301d8;
+        public static final int mnpTextSize = 0x7f0301d9;
+        public static final int mnpTextStyle = 0x7f0301da;
+        public static final int mnpValue = 0x7f0301db;
+        public static final int mnpWrapped = 0x7f0301dc;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] MaterialNumberPicker = { 0x7f030165, 0x7f030166, 0x7f030167, 0x7f030168, 0x7f030169, 0x7f03016a, 0x7f03016b, 0x7f03016c, 0x7f03016d, 0x7f03016e };
+        public static final int[] MaterialNumberPicker = { 0x7f0301d3, 0x7f0301d4, 0x7f0301d5, 0x7f0301d6, 0x7f0301d7, 0x7f0301d8, 0x7f0301d9, 0x7f0301da, 0x7f0301db, 0x7f0301dc };
         public static final int MaterialNumberPicker_mnpEditable = 0;
         public static final int MaterialNumberPicker_mnpFontname = 1;
         public static final int MaterialNumberPicker_mnpMaxValue = 2;

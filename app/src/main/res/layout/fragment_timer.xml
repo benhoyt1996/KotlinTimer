@@ -22,7 +22,7 @@
 
     <RelativeLayout android:id="@+id/time_picker_layout" android:layout_below="@id/title_text_view"
                     android:layout_width="wrap_content" android:layout_height="400dp"
-                    android:layout_centerHorizontal="true" android:layout_marginTop="10dp">
+                    android:layout_centerHorizontal="true" android:layout_marginTop="25dp">
 
         <com.github.stephenvinouze.materialnumberpickercore.MaterialNumberPicker
                 android:id="@+id/seconds_picker"
@@ -37,8 +37,9 @@
                 app:mnpTextStyle="bold"
                 app:mnpValue="10"
                 app:mnpWrapped="true"
-                android:padding="5dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="5dp" android:scrollbarDefaultDelayBeforeFade="300"
+                android:keepScreenOn="true" android:hapticFeedbackEnabled="true"
+        />
 
     </RelativeLayout>
 
