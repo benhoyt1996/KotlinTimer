@@ -5,6 +5,8 @@ INJECTED from /home/benjamin/AndroidStudioProjects/BensTimer/app/src/main/Androi
 INJECTED from /home/benjamin/AndroidStudioProjects/BensTimer/app/src/main/AndroidManifest.xml:2:1-26:12
 INJECTED from /home/benjamin/AndroidStudioProjects/BensTimer/app/src/main/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.material:material:1.1.0-alpha09] /home/benjamin/.gradle/caches/transforms-2/files-2.1/8150837d0409154479849cbe2d9e2046/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.tomeees:scrollpicker:1.7.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/08c74a9ad831c3f5badbc0aebb328bd7/AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.AndroidDeveloperLB:AutoFitTextView:4] /home/benjamin/.gradle/caches/transforms-2/files-2.1/0b560a7758b0dbc22161682a35c90bd1/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.appcompat:appcompat:1.1.0-rc01] /home/benjamin/.gradle/caches/transforms-2/files-2.1/71a578a7665f5412b83d09ed233dbc43/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/a7d7ae583b6fd0db89c85f04f8f8183e/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/64eda89a03884450e09e4c492fa763f5/AndroidManifest.xml:2:1-11:12
@@ -36,6 +38,8 @@ MERGED from [androidx.print:print:1.0.0] /home/benjamin/.gradle/caches/transform
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/d587869131bc4eb880fa9fe297bf3644/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/047f6cd045affaf3a7eeec2eaad51817/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/benjamin/.gradle/caches/transforms-2/files-2.1/3f450bedeb4fb74affed598eb9c1e13c/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.databinding:databinding-adapters:3.4.1] /home/benjamin/.gradle/caches/transforms-2/files-2.1/c3e02717e435b35ca632472c710e2934/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:databinding-runtime:3.4.1] /home/benjamin/.gradle/caches/transforms-2/files-2.1/ab2df4242f0c7ccf304e029be648c049/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/68e94c0be15e637b4c10690fba6050cb/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/a53aa3025c27aa415d6ee4e790d7354e/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/6a3208df0dbf101b9e89cb3cb9fd7eb7/AndroidManifest.xml:17:1-22:12
@@ -65,6 +69,10 @@ application
 ADDED from /home/benjamin/AndroidStudioProjects/BensTimer/app/src/main/AndroidManifest.xml:5:5-24:19
 MERGED from [com.google.android.material:material:1.1.0-alpha09] /home/benjamin/.gradle/caches/transforms-2/files-2.1/8150837d0409154479849cbe2d9e2046/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0-alpha09] /home/benjamin/.gradle/caches/transforms-2/files-2.1/8150837d0409154479849cbe2d9e2046/AndroidManifest.xml:22:5-20
+MERGED from [com.github.tomeees:scrollpicker:1.7.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/08c74a9ad831c3f5badbc0aebb328bd7/AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.tomeees:scrollpicker:1.7.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/08c74a9ad831c3f5badbc0aebb328bd7/AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.AndroidDeveloperLB:AutoFitTextView:4] /home/benjamin/.gradle/caches/transforms-2/files-2.1/0b560a7758b0dbc22161682a35c90bd1/AndroidManifest.xml:11:5-20
+MERGED from [com.github.AndroidDeveloperLB:AutoFitTextView:4] /home/benjamin/.gradle/caches/transforms-2/files-2.1/0b560a7758b0dbc22161682a35c90bd1/AndroidManifest.xml:11:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/64eda89a03884450e09e4c492fa763f5/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/64eda89a03884450e09e4c492fa763f5/AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0-rc02] /home/benjamin/.gradle/caches/transforms-2/files-2.1/85477137eba8a2beeda2706cc2a7a242/AndroidManifest.xml:24:5-89
@@ -109,6 +117,10 @@ INJECTED from /home/benjamin/AndroidStudioProjects/BensTimer/app/src/main/Androi
 INJECTED from /home/benjamin/AndroidStudioProjects/BensTimer/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.1.0-alpha09] /home/benjamin/.gradle/caches/transforms-2/files-2.1/8150837d0409154479849cbe2d9e2046/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.1.0-alpha09] /home/benjamin/.gradle/caches/transforms-2/files-2.1/8150837d0409154479849cbe2d9e2046/AndroidManifest.xml:20:5-44
+MERGED from [com.github.tomeees:scrollpicker:1.7.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/08c74a9ad831c3f5badbc0aebb328bd7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.tomeees:scrollpicker:1.7.3] /home/benjamin/.gradle/caches/transforms-2/files-2.1/08c74a9ad831c3f5badbc0aebb328bd7/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.AndroidDeveloperLB:AutoFitTextView:4] /home/benjamin/.gradle/caches/transforms-2/files-2.1/0b560a7758b0dbc22161682a35c90bd1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.AndroidDeveloperLB:AutoFitTextView:4] /home/benjamin/.gradle/caches/transforms-2/files-2.1/0b560a7758b0dbc22161682a35c90bd1/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0-rc01] /home/benjamin/.gradle/caches/transforms-2/files-2.1/71a578a7665f5412b83d09ed233dbc43/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0-rc01] /home/benjamin/.gradle/caches/transforms-2/files-2.1/71a578a7665f5412b83d09ed233dbc43/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/a7d7ae583b6fd0db89c85f04f8f8183e/AndroidManifest.xml:20:5-44
@@ -171,6 +183,10 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/benjamin/.gradle/
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/047f6cd045affaf3a7eeec2eaad51817/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/benjamin/.gradle/caches/transforms-2/files-2.1/3f450bedeb4fb74affed598eb9c1e13c/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/benjamin/.gradle/caches/transforms-2/files-2.1/3f450bedeb4fb74affed598eb9c1e13c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:databinding-adapters:3.4.1] /home/benjamin/.gradle/caches/transforms-2/files-2.1/c3e02717e435b35ca632472c710e2934/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-adapters:3.4.1] /home/benjamin/.gradle/caches/transforms-2/files-2.1/c3e02717e435b35ca632472c710e2934/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.4.1] /home/benjamin/.gradle/caches/transforms-2/files-2.1/ab2df4242f0c7ccf304e029be648c049/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.4.1] /home/benjamin/.gradle/caches/transforms-2/files-2.1/ab2df4242f0c7ccf304e029be648c049/AndroidManifest.xml:22:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/68e94c0be15e637b4c10690fba6050cb/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/68e94c0be15e637b4c10690fba6050cb/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/benjamin/.gradle/caches/transforms-2/files-2.1/a53aa3025c27aa415d6ee4e790d7354e/AndroidManifest.xml:20:5-44

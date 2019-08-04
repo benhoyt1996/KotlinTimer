@@ -1,5 +1,6 @@
 package com.example.benji.benstimer.Fragments
 
+import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import android.widget.Toast
 import com.example.benji.benstimer.R
@@ -56,9 +58,10 @@ class TimerFragment : Fragment() {
 
         timer_stop_reset_button.visibility = View.INVISIBLE
 
-        seconds_picker.maxValue = 60
-        seconds_picker.minValue = 0
-        seconds_picker.setOnLongPressUpdateInterval(1200)
+//        seconds_picker.maxValue = 60
+//        seconds_picker.minValue = 0
+//        seconds_picker.setOnLongPressUpdateInterval(1200)
+
 
         setListners()
 
@@ -84,20 +87,34 @@ class TimerFragment : Fragment() {
 
     fun setListners() {
 
-        seconds_picker.setOnValueChangedListener { numberPicker, oldValue, newValue ->
-            if(!isTimerRunning)
-            {
-                currentSecs = newValue
-                updateTimerText(newValue)
-            }
-        }
+//        seconds_picker.setOnValueChangedListener { numberPicker, oldValue, newValue ->
+//            if(!isTimerRunning)
+//            {
+//                currentSecs = newValue
+//                updateTimerText(newValue)
+//            }
+//        }
+
+        //number_edit_text.requestFocusFromTouch()
 
         timer_start_button.setOnClickListener{
+
+           if(number_edit_text.hasFocus() == true)
+           {
+               number_edit_text.clearFocus()
+               val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+               imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
+           }
+
+
+
             if(!isTimerRunning)
             {
                 //startTimer()
                 startOtherTimer()
                 timer_stop_reset_button.text = "STOP TIMER"
+
+
 
                 if(timer_stop_reset_button.visibility == View.INVISIBLE)
                 {
@@ -120,7 +137,20 @@ class TimerFragment : Fragment() {
 
             }
         }
+
+
+        relative_layout.setOnClickListener {
+            if(number_edit_text.hasFocus() == true)
+            {
+                number_edit_text.clearFocus()
+                val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
+            }
+
+        }
+
     }
+
 
 
     fun updateTimerText(newValue: Int?) {
@@ -133,7 +163,7 @@ class TimerFragment : Fragment() {
 
     //Call this method to start timer on activity start
     private fun startOtherTimer(){
-        time = "${seconds_picker?.value}000"
+        time = "${number_edit_text?.text}000"
         timer = Timer(time.toLong())
         timer?.start()
         isTimerRunning = true
@@ -152,6 +182,8 @@ class TimerFragment : Fragment() {
             time_left_text_view.text = "${+millisUntilFinished/1000}"
         }
     }
+
+
 
 
 }

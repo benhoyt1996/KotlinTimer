@@ -376,8 +376,10 @@ attr imageButtonStyle
 attr indeterminateProgressStyle
 attr initialActivityCount
 attr insetForeground
+attr isEnabled
 attr isLightTheme
 attr isMaterialTheme
+attr isTextBold
 attr itemBackground
 attr itemFillColor
 attr itemHorizontalPadding
@@ -568,6 +570,11 @@ attr searchViewStyle
 attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
+attr selectedTextColor
+attr selectedTextSize
+attr selectorColor
+attr selectorLineWidth
+attr selectorStyle
 attr shapeAppearance
 attr shapeAppearanceLargeComponent
 attr shapeAppearanceMediumComponent
@@ -578,6 +585,7 @@ attr showDividers
 attr showMotionSpec
 attr showText
 attr showTitle
+attr shownItemCount
 attr shrinkMotionSpec
 attr singleChoiceItemLayout
 attr singleLine
@@ -667,11 +675,13 @@ attr textAppearanceSearchResultTitle
 attr textAppearanceSmallPopupMenu
 attr textAppearanceSubtitle1
 attr textAppearanceSubtitle2
+attr textColor
 attr textColorAlertDialogListItem
 attr textColorSearchUrl
 attr textEndPadding
 attr textInputStyle
 attr textLocale
+attr textSize
 attr textStartPadding
 attr theme
 attr themeLineHeight
@@ -707,6 +717,7 @@ attr trackTintMode
 attr ttcIndex
 attr useCompatPadding
 attr useMaterialThemeColors
+attr value
 attr viewInflaterClass
 attr voiceIcon
 attr windowActionBar
@@ -918,6 +929,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color selectorColorDefault
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -929,6 +941,8 @@ color test_background_state_unsupported_case
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color test_surface_state
+color textColorDefault
+color textColorDisabled
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -1497,6 +1511,7 @@ id checked
 id chip
 id chip_group
 id chronometer
+id classic
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -1506,9 +1521,12 @@ id container
 id content
 id contentPanel
 id coordinator
+id correctionViewBottom
+id correctionViewTop
 id custom
 id customPanel
 id cut
+id dataBinding
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
@@ -1610,8 +1628,11 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number_edit_text
 id off
 id on
+id onAttachStateChangeListener
+id onDateChanged
 id outline
 id packed
 id parallax
@@ -1625,6 +1646,9 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id rectangle
+id rectangleFilled
+id relative_layout
 id right
 id right_icon
 id right_side
@@ -1650,7 +1674,6 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id seconds_picker
 id select_dialog_listview
 id selected
 id shortcut
@@ -1693,14 +1716,15 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textWatcher
 id text_input_end_icon
+id text_input_layout
 id text_input_start_icon
 id textinput_counter
 id textinput_error
 id textinput_helper_text
 id time
 id time_left_text_view
-id time_picker_layout
 id timer_start_button
 id timer_stop_reset_button
 id title
@@ -1850,6 +1874,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout scroll_picker
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1954,6 +1979,8 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string text_input_string
+string time_left
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -2707,6 +2734,7 @@ styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground
+styleable ScrollPicker isEnabled isTextBold selectedTextColor selectedTextSize selectorColor selectorLineWidth selectorStyle shownItemCount textColor textSize value
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
