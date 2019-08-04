@@ -1,2 +1,2 @@
 # Multi-Timer
-Android X Timer Application written in Kotlin
+Android Timer Application written in Kotlin
