@@ -18,19 +18,14 @@ class TimerFragment : Fragment() {
 
     val TAG = "TimerFragment"
 
-    var currentSecs: Int? = null
-    var currentMins: Int? = null
-
-    var isTimerRunning = false
+    var isHeatupTimerRunning = false
     var isCooldownTimerRunning = false
 
-    //var time: String = "20000"
-
-    var time = "20000"
+    // Set arbitrary values
+    var heatupTime = "20000"
     var cooldownTime = "20000"
 
-
-    var timer: Timer?=null
+    var heatupTimer: HeatupTimer?=null
     var cooldownTimer: CountDownTimer?=null
 
 
@@ -54,16 +49,8 @@ class TimerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         timer_stop_reset_button.visibility = View.INVISIBLE
-
-//        seconds_picker.maxValue = 60
-//        seconds_picker.minValue = 0
-//        seconds_picker.setOnLongPressUpdateInterval(1200)
-
-
         setListners()
-
     }
 
     override fun onDetach() {
@@ -81,21 +68,9 @@ class TimerFragment : Fragment() {
             return TimerFragment()
         }
 
-
     }
 
     fun setListners() {
-
-//        seconds_picker.setOnValueChangedListener { numberPicker, oldValue, newValue ->
-//            if(!isTimerRunning)
-//            {
-//                currentSecs = newValue
-//                updateTimerText(newValue)
-//            }
-//        }
-
-        //number_edit_text.requestFocusFromTouch()
-
         timer_start_button.setOnClickListener{
 
            if(number_edit_text.hasFocus() == true)
@@ -105,16 +80,11 @@ class TimerFragment : Fragment() {
                imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
            }
 
-
-
             //  Verify timers are not counting down before attempting to start them
-            if(!isTimerRunning && !isCooldownTimerRunning)
+            if(!isHeatupTimerRunning && !isCooldownTimerRunning)
             {
-                //startTimer()
-                startOtherTimer()
+                startTimers()
                 timer_stop_reset_button.text = "STOP TIMER"
-
-
 
                 if(timer_stop_reset_button.visibility == View.INVISIBLE)
                 {
@@ -123,15 +93,11 @@ class TimerFragment : Fragment() {
             }
         }
 
-
         timer_stop_reset_button.setOnClickListener {
-            if(isTimerRunning)
+            if(isHeatupTimerRunning)
             {
-                //stopTimer()
-
-                timer?.onFinish()
-                timer?.cancel()
-
+                heatupTimer?.onFinish()
+                heatupTimer?.cancel()
             }
             if (isCooldownTimerRunning)
             {
@@ -139,7 +105,6 @@ class TimerFragment : Fragment() {
                 cooldownTimer?.cancel()
             }
         }
-
 
         constraint_layout.setOnClickListener {
             if(number_edit_text.hasFocus() == true || timer_two_edit_text.hasFocus())
@@ -149,28 +114,22 @@ class TimerFragment : Fragment() {
                 val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
             }
-
         }
-
     }
 
-
-
     fun updateTimerText(newValue: Int?) {
-        if(!isTimerRunning)
+        if(!isHeatupTimerRunning)
         {
             first_timer_text_view.text = newValue.toString()
         }
     }
 
-
-    //Call this method to start timer on activity start
-    private fun startOtherTimer(){
-        time = "${number_edit_text?.text}000"
-        timer = Timer(time.toLong())
-        timer?.start()
-        isTimerRunning = true
-
+    //Call this method to start heatupTimer on activity start
+    private fun startTimers(){
+        heatupTime = "${number_edit_text?.text}000"
+        heatupTimer = HeatupTimer(heatupTime.toLong())
+        heatupTimer?.start()
+        isHeatupTimerRunning = true
 
         cooldownTime = "${timer_two_edit_text?.text}000"
         cooldownTimer = CooldownTimer(cooldownTime.toLong())
@@ -179,12 +138,12 @@ class TimerFragment : Fragment() {
 
     }
 
-    inner class Timer(miliis:Long) : CountDownTimer(miliis,1000){
+    inner class HeatupTimer(miliis:Long) : CountDownTimer(miliis,1000){
         var millisUntilFinished:Long = 0
         override fun onFinish() {
             //first_timer_text_view.text = "0"
             timer_stop_reset_button.visibility = View.VISIBLE
-            isTimerRunning = false
+            isHeatupTimerRunning = false
         }
 
         override fun onTick(millisUntilFinished: Long) {
@@ -192,8 +151,6 @@ class TimerFragment : Fragment() {
             first_timer_text_view.text = "${+millisUntilFinished/1000}"
         }
     }
-
-
 
     inner class CooldownTimer(miliis:Long) : CountDownTimer(miliis,1000){
         var millisUntilFinished:Long = 0
@@ -208,10 +165,4 @@ class TimerFragment : Fragment() {
             second_timer_text_view.text = "${+millisUntilFinished/1000}"
         }
     }
-
-
-
-
-
-
 }
