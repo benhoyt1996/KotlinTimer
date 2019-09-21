@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/benjamin/AndroidStudioProjects/BensTimer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "outputFile": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/71a578a7665f5412b83d09ed233dbc43/res/values-v22/values-v22.xml",
+                    "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

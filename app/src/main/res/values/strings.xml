@@ -15,7 +15,13 @@
     <string name="menu_send">Send</string>
 
     <string name="time_left">Time Left: </string>
-    <string name="text_input_string">Input Number Here:</string>
+
+    <string name="heat_title">HEAT</string>
+    <string name="cool_title">COOL</string>
+    
+    <string name="heat_up">heat-up time</string>
+    <string name="cool_down">cool-down time</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

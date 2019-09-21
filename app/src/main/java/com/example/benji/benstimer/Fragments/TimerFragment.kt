@@ -1,6 +1,5 @@
 package com.example.benji.benstimer.Fragments
 
-import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -10,13 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.TextView
-import android.widget.Toast
 import com.example.benji.benstimer.R
 
 import kotlinx.android.synthetic.main.fragment_timer.*
-import java.util.*
-import java.util.concurrent.TimeUnit
 
 
 class TimerFragment : Fragment() {
@@ -27,12 +22,16 @@ class TimerFragment : Fragment() {
     var currentMins: Int? = null
 
     var isTimerRunning = false
+    var isCooldownTimerRunning = false
 
     //var time: String = "20000"
 
     var time = "20000"
+    var cooldownTime = "20000"
+
 
     var timer: Timer?=null
+    var cooldownTimer: CountDownTimer?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -108,7 +107,7 @@ class TimerFragment : Fragment() {
 
 
 
-            if(!isTimerRunning)
+            if(!isTimerRunning || !isCooldownTimerRunning)
             {
                 //startTimer()
                 startOtherTimer()
@@ -123,6 +122,7 @@ class TimerFragment : Fragment() {
             }
         }
 
+
         timer_stop_reset_button.setOnClickListener {
             if(isTimerRunning)
             {
@@ -132,17 +132,19 @@ class TimerFragment : Fragment() {
                 timer?.cancel()
 
             }
-            else
+            if (isCooldownTimerRunning)
             {
-
+                cooldownTimer?.onFinish()
+                cooldownTimer?.cancel()
             }
         }
 
 
-        relative_layout.setOnClickListener {
-            if(number_edit_text.hasFocus() == true)
+        constraint_layout.setOnClickListener {
+            if(number_edit_text.hasFocus() == true || timer_two_edit_text.hasFocus())
             {
                 number_edit_text.clearFocus()
+                timer_two_edit_text.clearFocus()
                 val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
             }
@@ -156,7 +158,7 @@ class TimerFragment : Fragment() {
     fun updateTimerText(newValue: Int?) {
         if(!isTimerRunning)
         {
-            time_left_text_view.text = newValue.toString()
+            first_timer_text_view.text = newValue.toString()
         }
     }
 
@@ -167,21 +169,46 @@ class TimerFragment : Fragment() {
         timer = Timer(time.toLong())
         timer?.start()
         isTimerRunning = true
+
+
+        cooldownTime = "${timer_two_edit_text?.text}000"
+        cooldownTimer = CooldownTimer(cooldownTime.toLong())
+        cooldownTimer?.start()
+        isCooldownTimerRunning = true
+
     }
 
     inner class Timer(miliis:Long) : CountDownTimer(miliis,1000){
         var millisUntilFinished:Long = 0
         override fun onFinish() {
-            time_left_text_view.text = "0"
+            //first_timer_text_view.text = "0"
             timer_stop_reset_button.visibility = View.VISIBLE
             isTimerRunning = false
         }
 
         override fun onTick(millisUntilFinished: Long) {
             this.millisUntilFinished = millisUntilFinished
-            time_left_text_view.text = "${+millisUntilFinished/1000}"
+            first_timer_text_view.text = "${+millisUntilFinished/1000}"
         }
     }
+
+
+
+    inner class CooldownTimer(miliis:Long) : CountDownTimer(miliis,1000){
+        var millisUntilFinished:Long = 0
+        override fun onFinish() {
+            //second_timer_text_view.text = "0"
+            timer_stop_reset_button.visibility = View.VISIBLE
+            isCooldownTimerRunning = false
+        }
+
+        override fun onTick(millisUntilFinished: Long) {
+            this.millisUntilFinished = millisUntilFinished
+            second_timer_text_view.text = "${+millisUntilFinished/1000}"
+        }
+    }
+
+
 
 
 

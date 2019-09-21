@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/benjamin/AndroidStudioProjects/BensTimer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
+            "outputFile": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
             "map": [
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/85477137eba8a2beeda2706cc2a7a242/res/values-kn/values-kn.xml",
+                    "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/58299d3d7b003af22c5987994fb54060/core-1.1.0-rc02/res/values-kn/values-kn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/benjamin/.gradle/caches/transforms-2/files-2.1/71a578a7665f5412b83d09ed233dbc43/res/values-kn/values-kn.xml",
+                    "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/values-kn/values-kn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

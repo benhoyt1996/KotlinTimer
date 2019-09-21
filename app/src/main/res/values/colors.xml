@@ -19,5 +19,10 @@
     <color name="colorOnSurface">#000000</color>
     <color name="colorError">#C51162</color>
     <color name="colorOnError">#FFFFFF</color>
+
+    <color name="cool_color">#1A93CF</color>
+    <color name="hot_color">#FB5406</color>
+
+    <color name="cool_color_two">#1BB3AB</color>
     
 </resources>
