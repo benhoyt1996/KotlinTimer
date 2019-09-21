@@ -56,12 +56,12 @@
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/anim/abc_tooltip_enter.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_mtrl_picker_dialog.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/mtrl_picker_dialog.xml"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_mtrl_picker_dialog.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/mtrl_picker_dialog.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -72,12 +72,12 @@
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/anim-v21/mtrl_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_mtrl_calendar_vertical.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/mtrl_calendar_vertical.xml"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_mtrl_calendar_vertical.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/mtrl_calendar_vertical.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -108,12 +108,12 @@
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable_abc_textfield_search_material.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable_abc_textfield_search_material.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable/abc_textfield_search_material.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_design_bottom_navigation_item.xml.flat",
@@ -180,12 +180,12 @@
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/anim_btn_checkbox_to_checked_icon_null_animation.xml.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/anim/btn_checkbox_to_checked_icon_null_animation.xml"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/animator_design_fab_hide_motion_spec.xml.flat",
@@ -204,28 +204,28 @@
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_abc_action_mode_close_item_material.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/layout/abc_action_mode_close_item_material.xml"
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_abc_action_mode_close_item_material.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/color/design_error.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-v21_design_password_eye.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/drawable-v21/design_password_eye.xml"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-v21_design_password_eye.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/drawable-v21/design_password_eye.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -240,24 +240,24 @@
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/interpolator_btn_radio_to_on_mtrl_animation_interpolator_0.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable_mtrl_tabs_default_indicator.xml.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/interpolator_btn_radio_to_on_mtrl_animation_interpolator_0.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/color_mtrl_card_view_foreground.xml.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/color/mtrl_card_view_foreground.xml"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -316,36 +316,36 @@
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/color/mtrl_filled_icon_tint.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_text_view_without_line_height.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/text_view_without_line_height.xml"
-    },
-    {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_text_view_with_line_height_from_style.xml.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/text_view_with_line_height_from_style.xml"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/anim_design_snackbar_in.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/anim/design_snackbar_in.xml"
-    },
-    {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_mtrl_alert_select_dialog_multichoice.xml.flat",
-        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/mtrl_alert_select_dialog_multichoice.xml"
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_text_view_without_line_height.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/text_view_without_line_height.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/layout_mtrl_alert_select_dialog_multichoice.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/layout/mtrl_alert_select_dialog_multichoice.xml"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/anim_design_snackbar_in.xml.flat",
+        "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/17d945ad67f511293ec95b7c6814b8e1/material-1.1.0-alpha09/res/anim/design_snackbar_in.xml"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/Users/ben-mac/.gradle/caches/transforms-2/files-2.1/decb0e574584f82353977e7e13a4ae18/appcompat-1.1.0-rc01/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/ben-mac/Documents/AndroidProjects/Multi-Timer/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",

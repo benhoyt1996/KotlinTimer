@@ -107,7 +107,8 @@ class TimerFragment : Fragment() {
 
 
 
-            if(!isTimerRunning || !isCooldownTimerRunning)
+            //  Verify timers are not counting down before attempting to start them
+            if(!isTimerRunning && !isCooldownTimerRunning)
             {
                 //startTimer()
                 startOtherTimer()
