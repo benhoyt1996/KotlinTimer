@@ -37,7 +37,8 @@ dependencies {
 
     implementation "com.github.tomeees:scrollpicker:1.7.3"
 
-
     implementation "com.github.StephenVinouze:MaterialNumberPicker:1.0.6"
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
 
 }

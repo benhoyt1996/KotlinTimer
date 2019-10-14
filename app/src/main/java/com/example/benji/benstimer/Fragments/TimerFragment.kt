@@ -1,17 +1,26 @@
 package com.example.benji.benstimer.Fragments
 
+import android.content.BroadcastReceiver
 import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.example.benji.benstimer.EventBus.Event
 import com.example.benji.benstimer.R
 
 import kotlinx.android.synthetic.main.fragment_timer.*
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import java.lang.StringBuilder
 
 
 class TimerFragment : Fragment() {
@@ -28,6 +37,8 @@ class TimerFragment : Fragment() {
     var heatupTimer: HeatupTimer?=null
     var cooldownTimer: CountDownTimer?=null
 
+    //val reciever = mMessageReceiver()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +51,11 @@ class TimerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_timer, container, false)
+
+//        val filter = IntentFilter().apply { addAction("SOME_TAG") }
+//
+//        LocalBroadcastManager.getInstance(context!!).registerReceiver(reciever, filter)
+
         return view
     }
 
@@ -51,6 +67,7 @@ class TimerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         timer_stop_reset_button.visibility = View.INVISIBLE
         setListners()
+
     }
 
     override fun onDetach() {
@@ -71,8 +88,8 @@ class TimerFragment : Fragment() {
     }
 
     fun setListners() {
-        timer_start_button.setOnClickListener{
 
+        timer_start_button.setOnClickListener{
            if(number_edit_text.hasFocus() == true)
            {
                number_edit_text.clearFocus()
@@ -80,23 +97,15 @@ class TimerFragment : Fragment() {
                imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
            }
 
-            //  Verify timers are not counting down before attempting to start them
-            if(!isHeatupTimerRunning && !isCooldownTimerRunning)
-            {
-                startTimers()
-                timer_stop_reset_button.text = "STOP TIMER"
-
-                if(timer_stop_reset_button.visibility == View.INVISIBLE)
-                {
-                    timer_stop_reset_button.visibility = View.VISIBLE
-                }
-            }
+            startHeatTimer()
         }
+
 
         timer_stop_reset_button.setOnClickListener {
             if(isHeatupTimerRunning)
             {
-                heatupTimer?.onFinish()
+                //heatupTimer?.onFinish()
+                heatupTimer?.stopTimer()
                 heatupTimer?.cancel()
             }
             if (isCooldownTimerRunning)
@@ -117,6 +126,13 @@ class TimerFragment : Fragment() {
         }
     }
 
+    @Subscribe
+    public fun onKeyEvent(event: Event) {
+        //called when an event occurs
+        cooldownTime = "${timer_two_edit_text?.text}000"
+        heatupTime = "${number_edit_text?.text}000"
+    }
+
     fun updateTimerText(newValue: Int?) {
         if(!isHeatupTimerRunning)
         {
@@ -126,28 +142,69 @@ class TimerFragment : Fragment() {
 
     //Call this method to start heatupTimer on activity start
     private fun startTimers(){
-        heatupTime = "${number_edit_text?.text}000"
-        heatupTimer = HeatupTimer(heatupTime.toLong())
-        heatupTimer?.start()
-        isHeatupTimerRunning = true
 
-        cooldownTime = "${timer_two_edit_text?.text}000"
-        cooldownTimer = CooldownTimer(cooldownTime.toLong())
-        cooldownTimer?.start()
-        isCooldownTimerRunning = true
+
 
     }
+
+    private fun startHeatTimer() {
+
+        Log.d(TAG, isCooldownTimerRunning.toString() +  isHeatupTimerRunning.toString())
+        //  Verify timers are not counting down before attempting to start them
+        if(!isHeatupTimerRunning && !isCooldownTimerRunning)
+        {
+            heatupTime = "${number_edit_text?.text}000"
+            heatupTimer = HeatupTimer(heatupTime.toLong())
+            heatupTimer?.start()
+            isHeatupTimerRunning = true
+            timer_stop_reset_button.text = "STOP TIMER"
+
+            if(timer_stop_reset_button.visibility == View.INVISIBLE)
+            {
+                timer_stop_reset_button.visibility = View.VISIBLE
+            }
+        }
+
+    }
+
+//    private fun startCoolTimer() {
+//
+//        if(!isCooldownTimerRunning)
+//        {
+//
+//        }
+//
+//
+//    }
+
 
     inner class HeatupTimer(miliis:Long) : CountDownTimer(miliis,1000){
         var millisUntilFinished:Long = 0
         override fun onFinish() {
             //first_timer_text_view.text = "0"
-            timer_stop_reset_button.visibility = View.VISIBLE
+            //timer_stop_reset_button.visibility = View.VISIBLE
             isHeatupTimerRunning = false
+
+            //startCoolTimer()
+
+            cooldownTime = "${timer_two_edit_text?.text}000"
+            cooldownTimer = CooldownTimer(cooldownTime.toLong())
+            cooldownTimer?.start()
+            isCooldownTimerRunning = true
+
         }
 
+        fun stopTimer() {
+            isHeatupTimerRunning = false
+            first_timer_text_view.text = "0"
+        }
+
+//        fun startCoolTimer() {
+//            startCoolTimer()
+//        }
+
         override fun onTick(millisUntilFinished: Long) {
-            this.millisUntilFinished = millisUntilFinished
+
             first_timer_text_view.text = "${+millisUntilFinished/1000}"
         }
     }
@@ -161,8 +218,21 @@ class TimerFragment : Fragment() {
         }
 
         override fun onTick(millisUntilFinished: Long) {
-            this.millisUntilFinished = millisUntilFinished
+
             second_timer_text_view.text = "${+millisUntilFinished/1000}"
         }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        EventBus.getDefault().unregister(this)
+    }
 }
+
+//class mMessageReceiver : BroadcastReceiver() {
+//
+//    override fun onReceive(context: Context?, intent: Intent?) {
+//        val keyCode = intent?.getIntExtra("KEY_CODE", 0)
+//        // Do something with the event
+//    }
+//}

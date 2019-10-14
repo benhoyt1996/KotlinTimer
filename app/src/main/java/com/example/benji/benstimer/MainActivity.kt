@@ -1,6 +1,8 @@
 package com.example.benji.benstimer
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import androidx.core.view.GravityCompat
@@ -12,9 +14,12 @@ import androidx.appcompat.widget.Toolbar
 import android.view.MenuItem
 
 import android.view.Menu
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.example.benji.benstimer.EventBus.Event
 
 import com.example.benji.benstimer.Fragments.TimerFragment
 import kotlinx.android.synthetic.main.app_bar_main.*
+import org.greenrobot.eventbus.EventBus
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -101,4 +106,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+//
+//        val intent = Intent("SOME_TAG").apply { putExtra("KEY_CODE", keyCode) }
+//
+//        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+
+        EventBus.getDefault().post(Event(keyCode))
+
+        return super.onKeyDown(keyCode, event)
+    }
+
 }
