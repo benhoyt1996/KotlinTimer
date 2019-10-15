@@ -24,5 +24,9 @@
     <color name="hot_color">#FB5406</color>
 
     <color name="cool_color_two">#1BB3AB</color>
+
+
+    <color name="primaryPurp">#5D1049</color>
+    <color name="secondaryPurp">#720D5D</color>
     
 </resources>

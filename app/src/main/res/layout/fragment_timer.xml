@@ -9,6 +9,11 @@
         tools:context=".Fragments.TimerFragment">
 
 
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content">-->
+
+
     <TextView
             android:id="@+id/title_one_text_view"
             android:layout_width="wrap_content"
@@ -17,6 +22,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="72dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/raleway"
             android:text="@string/heat_title"
             android:textColor="@color/hot_color"
             android:textSize="30sp"
@@ -31,6 +37,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="72dp"
+            android:fontFamily="@font/raleway"
             android:text="@string/cool_title"
             android:textColor="@color/cool_color_two"
             android:textSize="30sp"
@@ -42,12 +49,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/raleway"
             android:hint="0"
             android:textColor="@color/hot_color"
             android:textSize="60sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/title_one_text_view"
             app:layout_constraintTop_toBottomOf="@+id/title_one_text_view" />
 
     <TextView
@@ -55,13 +62,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="92dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/raleway"
             android:hint="0"
             android:textColor="#1BB3AB"
             android:textSize="60sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/title_two_text_view"
             app:layout_constraintTop_toBottomOf="@+id/title_two_text_view" />
+
+
+    <!--    </androidx.cardview.widget.CardView>-->
 
     <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_layout"
@@ -72,10 +82,13 @@
             android:layout_marginTop="16dp"
             android:focusable="auto"
             android:hint="@string/heat_up"
+            app:boxBackgroundColor="@color/hot_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/second_timer_text_view"
-            app:boxBackgroundColor="@color/hot_color">
+            app:layout_constraintTop_toBottomOf="@+id/first_timer_text_view"
+            app:boxStrokeColor="#000000"
+            app:hintTextColor="#000000"
+            app:startIconDrawable="@drawable/hot_black_24dp">
 
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/number_edit_text"
@@ -83,11 +96,13 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:outlineAmbientShadowColor="@color/hot_color"
-                android:textSize="20sp"
+                android:fontFamily="@font/raleway"
                 android:inputType="number"
                 android:minWidth="300dp"
-                android:minHeight="100dp" />
+                android:minHeight="100dp"
+                android:outlineAmbientShadowColor="@color/hot_color"
+                android:textSize="20sp"
+                 />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,12 +115,13 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:focusable="auto"
-            app:boxStrokeColor="@color/cool_color_two"
             android:hint="@string/cool_down"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:boxBackgroundColor="@color/cool_color_two"
+            app:layout_constraintStart_toStartOf="@+id/text_input_layout"
             app:layout_constraintTop_toBottomOf="@+id/text_input_layout"
-            app:boxBackgroundColor="@color/cool_color_two">
+            app:boxStrokeColor="#000000"
+            app:hintTextColor="#000000"
+            app:startIconDrawable="@drawable/cold_black_24dp">
 
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/timer_two_edit_text"
@@ -113,10 +129,11 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textSize="20sp"
+                android:fontFamily="@font/raleway"
                 android:inputType="number"
                 android:minWidth="300dp"
-                android:minHeight="100dp" />
+                android:minHeight="100dp"
+                android:textSize="20sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,13 +141,12 @@
     <com.google.android.material.button.MaterialButton
             android:id="@+id/timer_stop_reset_button"
             style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="60dp"
             android:background="#3C565E"
+            android:fontFamily="@font/raleway"
             android:minHeight="75dp"
             android:textColor="#1BB3AB"
             android:textSize="20sp"
@@ -141,22 +157,19 @@
     <com.google.android.material.button.MaterialButton
             android:id="@+id/timer_start_button"
             style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="62dp"
             android:background="#3C565E"
+            android:fontFamily="@font/raleway"
             android:minHeight="75dp"
             android:text="START TIMER!"
             android:textColor="#1BB3AB"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/timer_stop_reset_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/second_timer_input_layout" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     <!--<com.google.android.material.button.MaterialButton-->
     <!--android:id="@+id/material_button"-->

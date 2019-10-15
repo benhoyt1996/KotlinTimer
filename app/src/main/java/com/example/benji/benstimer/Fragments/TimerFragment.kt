@@ -21,6 +21,11 @@ import kotlinx.android.synthetic.main.fragment_timer.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import java.lang.StringBuilder
+import android.R.id.message
+import androidx.databinding.adapters.TextViewBindingAdapter.setText
+import com.example.benji.benstimer.NavigationHost
+import org.greenrobot.eventbus.ThreadMode
+import kotlin.math.round
 
 
 class TimerFragment : Fragment() {
@@ -35,7 +40,7 @@ class TimerFragment : Fragment() {
     var cooldownTime = "20000"
 
     var heatupTimer: HeatupTimer?=null
-    var cooldownTimer: CountDownTimer?=null
+    var cooldownTimer: CooldownTimer?=null
 
     //val reciever = mMessageReceiver()
 
@@ -58,6 +63,7 @@ class TimerFragment : Fragment() {
 
         return view
     }
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -105,12 +111,12 @@ class TimerFragment : Fragment() {
             if(isHeatupTimerRunning)
             {
                 //heatupTimer?.onFinish()
-                heatupTimer?.stopTimer()
+                heatupTimer?.stopHeatTimer()
                 heatupTimer?.cancel()
             }
             if (isCooldownTimerRunning)
             {
-                cooldownTimer?.onFinish()
+                cooldownTimer?.stopCoolTimer()
                 cooldownTimer?.cancel()
             }
         }
@@ -127,23 +133,11 @@ class TimerFragment : Fragment() {
     }
 
     @Subscribe
-    public fun onKeyEvent(event: Event) {
+    fun onKeyEvent(event: Event) {
         //called when an event occurs
-        cooldownTime = "${timer_two_edit_text?.text}000"
-        heatupTime = "${number_edit_text?.text}000"
-    }
-
-    fun updateTimerText(newValue: Int?) {
-        if(!isHeatupTimerRunning)
-        {
-            first_timer_text_view.text = newValue.toString()
-        }
-    }
-
-    //Call this method to start heatupTimer on activity start
-    private fun startTimers(){
-
-
+        Log.d(TAG, "EventBus Triggered...")
+        first_timer_text_view.text = "${number_edit_text?.text}"
+        second_timer_text_view.text = "${timer_two_edit_text?.text}"
 
     }
 
@@ -159,6 +153,8 @@ class TimerFragment : Fragment() {
             isHeatupTimerRunning = true
             timer_stop_reset_button.text = "STOP TIMER"
 
+            setupCooldownTimer()
+
             if(timer_stop_reset_button.visibility == View.INVISIBLE)
             {
                 timer_stop_reset_button.visibility = View.VISIBLE
@@ -167,15 +163,11 @@ class TimerFragment : Fragment() {
 
     }
 
-//    private fun startCoolTimer() {
-//
-//        if(!isCooldownTimerRunning)
-//        {
-//
-//        }
-//
-//
-//    }
+
+    fun setupCooldownTimer() {
+        cooldownTime = "${timer_two_edit_text?.text}000"
+        cooldownTimer = CooldownTimer(cooldownTime.toLong())
+    }
 
 
     inner class HeatupTimer(miliis:Long) : CountDownTimer(miliis,1000){
@@ -184,19 +176,18 @@ class TimerFragment : Fragment() {
             //first_timer_text_view.text = "0"
             //timer_stop_reset_button.visibility = View.VISIBLE
             isHeatupTimerRunning = false
+            first_timer_text_view.text = "0"
 
-            //startCoolTimer()
-
-            cooldownTime = "${timer_two_edit_text?.text}000"
-            cooldownTimer = CooldownTimer(cooldownTime.toLong())
+            //Start CoolDownTimer
             cooldownTimer?.start()
             isCooldownTimerRunning = true
 
         }
 
-        fun stopTimer() {
+        fun stopHeatTimer() {
             isHeatupTimerRunning = false
-            first_timer_text_view.text = "0"
+            first_timer_text_view.text = "${number_edit_text.text}"
+            second_timer_text_view.text = "${timer_two_edit_text.text}"
         }
 
 //        fun startCoolTimer() {
@@ -205,7 +196,9 @@ class TimerFragment : Fragment() {
 
         override fun onTick(millisUntilFinished: Long) {
 
-            first_timer_text_view.text = "${+millisUntilFinished/1000}"
+            //val d: Double = millisUntilFinished.toDouble()
+
+            first_timer_text_view.text = "${+round(millisUntilFinished.toDouble()/1000)}".replace(".0", "")
         }
     }
 
@@ -215,24 +208,47 @@ class TimerFragment : Fragment() {
             //second_timer_text_view.text = "0"
             timer_stop_reset_button.visibility = View.VISIBLE
             isCooldownTimerRunning = false
+            second_timer_text_view.text = "0"
+
+            bothTimersFinished()
+        }
+
+        fun stopCoolTimer() {
+            isCooldownTimerRunning = false
+
+            first_timer_text_view.text = "${number_edit_text.text}"
+            second_timer_text_view.text = "${timer_two_edit_text.text}"
         }
 
         override fun onTick(millisUntilFinished: Long) {
 
-            second_timer_text_view.text = "${+millisUntilFinished/1000}"
+
+
+            second_timer_text_view.text = "${+round(millisUntilFinished.toDouble()/1000)}".replace(".0", "")
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        EventBus.getDefault().unregister(this)
+    fun bothTimersFinished() {
+        //EventBus.getDefault().post(Event(911))
+        (activity as NavigationHost).navigateTo(TimerFinishedFragment(), true)
     }
-}
 
-//class mMessageReceiver : BroadcastReceiver() {
-//
-//    override fun onReceive(context: Context?, intent: Intent?) {
-//        val keyCode = intent?.getIntExtra("KEY_CODE", 0)
-//        // Do something with the event
-//    }
-//}
+
+    //Subscribe to EventBus
+    override fun onStart() {
+        Log.d(TAG, "Registering EventBus")
+        EventBus.getDefault().register(this)
+        first_timer_text_view.text = "${number_edit_text?.text}"
+        second_timer_text_view.text = "${timer_two_edit_text?.text}"
+
+        super.onStart()
+    }
+
+    //Unsubscribe from EventBus
+    override fun onStop() {
+        EventBus.getDefault().unregister(this)
+        super.onStop()
+    }
+
+
+}

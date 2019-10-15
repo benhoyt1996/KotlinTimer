@@ -2,6 +2,7 @@ package com.example.benji.benstimer
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.KeyEvent
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
@@ -14,15 +15,19 @@ import androidx.appcompat.widget.Toolbar
 import android.view.MenuItem
 
 import android.view.Menu
+import androidx.fragment.app.Fragment
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.example.benji.benstimer.EventBus.Event
+import com.example.benji.benstimer.Fragments.TimerFinishedFragment
 
 import com.example.benji.benstimer.Fragments.TimerFragment
 import kotlinx.android.synthetic.main.app_bar_main.*
 import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, NavigationHost {
 
+    private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +48,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+
         //Apply fragment on StartUp
         if(savedInstanceState == null)
         {
@@ -53,6 +59,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         navView.setNavigationItemSelectedListener(this)
+    }
+
+    override fun navigateTo(fragment: Fragment, addToBackStack: Boolean) {
+
+//        val transaction = supportFragmentManager
+//            .beginTransaction()
+//            .replace(R.id.root_view, fragment)
+
+        //Custom Fragment Animations
+        //setCustomAnimations() used w/ 4 parameter overload to enable popBackStack() animations
+        val transaction = supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit, android.R.animator.fade_in, android.R.animator.fade_out)
+            .replace(R.id.root_view, fragment)
+
+
+        if(addToBackStack) {
+            transaction.addToBackStack(null)
+        }
+
+        transaction.commit()
     }
 
     override fun onBackPressed() {
@@ -117,6 +144,38 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         EventBus.getDefault().post(Event(keyCode))
 
         return super.onKeyDown(keyCode, event)
+    }
+
+    override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
+        EventBus.getDefault().post(Event(keyCode))
+        //EventBus.getDefault().postSticky(Event(keyCode))
+        return super.onKeyUp(keyCode, event)
+    }
+
+
+    @Subscribe
+    fun onTimerFinished(event: Event) {
+        Log.d(TAG, "EventBus Triggered...")
+        if(event.keyCode == 911)
+        {
+            Log.d(TAG, "Navigating to TimerFinishedFragment...")
+            navigateTo(TimerFinishedFragment.newInstance(), true)
+
+        }
+    }
+
+
+    //Subscribe to EventBus
+    override fun onStart() {
+        Log.d(TAG, "Registering EventBus")
+        EventBus.getDefault().register(this)
+        super.onStart()
+    }
+
+    //Unsubscribe from EventBus
+    override fun onStop() {
+        EventBus.getDefault().unregister(this)
+        super.onStop()
     }
 
 }
