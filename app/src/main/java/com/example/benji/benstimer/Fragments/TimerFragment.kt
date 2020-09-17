@@ -130,6 +130,16 @@ class TimerFragment : Fragment() {
                 imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
             }
         }
+
+
+        button_plus10.setOnClickListener {
+            if(isCooldownTimerRunning) {
+                cooldownTimer?.millisUntilFinished = cooldownTimer?.millisUntilFinished!!.plus(1000)
+               // second_timer_text_view.text = "${timer_two_edit_text?.text}"
+
+            }
+        }
+
     }
 
     @Subscribe

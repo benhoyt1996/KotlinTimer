@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //setCustomAnimations() used w/ 4 parameter overload to enable popBackStack() animations
         val transaction = supportFragmentManager
             .beginTransaction()
-            .setCustomAnimations(R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit, android.R.animator.fade_in, android.R.animator.fade_out)
+            .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out, android.R.animator.fade_in, android.R.animator.fade_out)
             .replace(R.id.root_view, fragment)
 
 

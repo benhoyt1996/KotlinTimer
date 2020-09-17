@@ -1519,6 +1519,8 @@ id bold_italic
 id bottom
 id button
 id buttonPanel
+id button_plus10
+id button_plus5
 id cancel_action
 id cancel_button
 id center
